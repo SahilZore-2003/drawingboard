@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Board</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2e7d1698d6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main">
+            <div class="options">
+                <p>shapes</p>
+                <div class="shape-options option">
+                    <p class="toolbtn" id="rectangle"><i class="fa-regular fa-square"></i>rectangle</p>
+                    <p class="toolbtn" id="circle"><i class="fa-regular fa-circle"></i>circle</p>
+                    <p class="toolbtn" id="triangle"><img src="triangle.png" class="triangle" alt="">triangle</p>
+                    <p class="fill-container"><input type="checkbox" name="" id="fillcolor">
+                        <label for="fillcolor"> fill color</label>
+                    </p>
+                </div>
+                <p>options</p>
+                <div class="paint-options option">
+                    <p class="active toolbtn" id="brush"><i class="fa-solid fa-paintbrush"></i>Brush</p>
+                    <p class="toolbtn" id="erase"><i class="fa-solid fa-eraser"></i>Erase</p>
+                    <input type="range" min="1" max="10" value="5" name="" id="rangeinput">
+                </div>
+                <p>colors</p>
+                <div class="color-option">
+                    <span style="background-color: red;"></span>
+                    <span style="background-color: blue;"></span>
+                    <span class="activecolor" style="background-color: black;"></span>
+                    <span style="background-color: rgb(231, 221, 221);"></span>
+                    <span  style="background-color: rgb(105, 247, 4);"></span>
+                </div>
+                <div class="buttons">
+                    <button class="clear" onclick="clearcanvas()">Clear Canvas</button> <br>
+                    <button class="save" onclick="saveImage()">Save as image</button>
+                </div>
+
+            </div>
+            <div class="board">
+                <canvas>
+
+                </canvas>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
